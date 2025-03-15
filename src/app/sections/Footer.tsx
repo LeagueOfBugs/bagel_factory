@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import {CTAButton} from "../components";
+// import {CTAButton} from "../components";
 import { content } from "@/config/content";
 function Footer() {
   return (
@@ -86,7 +86,7 @@ function Footer() {
                 placeholder="Your email"
                 className="px-3 py-2 text-sm rounded-md border bg-background flex-1"
               />
-              <CTAButton label="Sign Up" size={"sm"} link="#" />
+              {/* <CTAButton label="Sign Up" size={"sm"} link="#" /> */}
             </div>
           </div>
         </div>

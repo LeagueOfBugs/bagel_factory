@@ -1,6 +1,6 @@
 "use client";
 import { CartItem } from "@/types/types";
-import { CartContext } from "@/context/CartContext";
+import { CartContext } from "@/app/context/CartContext";
 import { useReducer } from "react";
 import cartReducer from "../reducers/cartReducer";
 import { content } from "@/config/content";

@@ -28,7 +28,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { content } from "@/config/content";
-import { useCart } from "@/context/CartContext";
+import { useCart } from "@/app/context/CartContext";
 
 // const initialCartItems = [
 //   {

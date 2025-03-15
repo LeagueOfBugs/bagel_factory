@@ -3,8 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./components";
 import { content } from "@/config/content";
-import Footer from "./sections/Footer";
 import { CartProviderWrapper } from "./providers/CartProvider";
+import FooterWrapper from "./sections/FooterWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +26,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
@@ -36,7 +37,7 @@ export default function RootLayout({
           cta={content.header.nav.cta}
         />
         <CartProviderWrapper>{children}</CartProviderWrapper>
-        <Footer />
+        <FooterWrapper />
       </body>
     </html>
   );

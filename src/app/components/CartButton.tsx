@@ -2,7 +2,7 @@
 
 import { CartButtonProps } from "@/types/types";
 import CTAButton from "./CTAButton";
-import { useCart } from "@/context/CartContext";
+import { useCart } from "@/app/context/CartContext";
 
 function CartButton({ size, variant, label, product }: CartButtonProps) {
   const { addItem, getCartItems } = useCart();
