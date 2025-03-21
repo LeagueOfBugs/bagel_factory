@@ -1,18 +1,17 @@
 import { content } from "@/config/content";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Coffee } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import CTAButton from "../components/CTAButton";
+import { ProductCard } from "../components";
 
 function Menu() {
   return (
-    <main className="flex-1">
-      <section className="bg-orange-500 text-white py-12">
-        <div className="container">
+    <main className="">
+      <section className="bg-orange-500 text-white py-5 flex justify-center">
+        <div className="max-w-7xl w-full flex flex-col justify-center">
           <Link
             href="/"
             className="inline-flex items-center text-white mb-4 hover:underline"
@@ -20,24 +19,26 @@ function Menu() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             {content.siteNav.goHome}
           </Link>
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <div>
+
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+            <div className="flex-1 min-w-0">
               <h1 className="text-3xl md:text-5xl font-bold mb-2">
                 {content.menu.title}
               </h1>
-              <p className="text-orange-100 max-w-xl">
+              <p className="text-orange-100 max-w-2xl">
                 {content.menu.subtitle}
               </p>
             </div>
-            <div className="flex gap-3">
+
+            <div className="flex gap-3 flex-shrink-0">
               <CTAButton label="Download PDF" link="#" variant="secondary" />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-8 border-b">
-        <div className="container">
+      <section className="py-8 border-b justify-center mx-auto max-w-screen-xl">
+        <div className="flex justify-center ">
           <Tabs defaultValue={content.menu.bagels.title} className="w-full">
             <div className="overflow-x-auto pb-2">
               <TabsList className="inline-flex w-full justify-start h-10 mb-8">
@@ -122,32 +123,17 @@ function Menu() {
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {content.menu.bagels.product.map((product, index) => (
-                      <Card key={index} className="overflow-hidden">
-                        <div className="aspect-square relative">
-                          <Image
-                            src={product.image || "/placeholder.svg"}
-                            alt={product.name}
-                            fill
-                            className="object-cover"
-                          />
-                          {product.badge && (
-                            <Badge className="absolute top-2 right-2 bg-orange-500">
-                              {product.badge}
-                            </Badge>
-                          )}
-                        </div>
-                        <CardContent className="p-4">
-                          <div className="flex justify-between items-start mb-2">
-                            <h4 className="font-bold">{product.name}</h4>
-                            <span className="font-bold text-orange-500">
-                              {product.price}
-                            </span>
-                          </div>
-                          <p className="text-sm text-muted-foreground">
-                            {product.description}
-                          </p>
-                        </CardContent>
-                      </Card>
+                      <ProductCard
+                        key={index}
+                        image={product.image}
+                        alt={product.name}
+                        name={product.name}
+                        description={product.description}
+                        price={product.price}
+                        id={product.id}
+                        badge={product.badge}
+                        cta="Add to cart"
+                      />
                     ))}
                   </div>
                 </div>
@@ -222,32 +208,17 @@ function Menu() {
                 <div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {content.menu.salads.product.map((product, index) => (
-                      <Card key={index} className="overflow-hidden">
-                        <div className="aspect-square relative">
-                          <Image
-                            src={product.image || "/placeholder.svg"}
-                            alt={product.name}
-                            fill
-                            className="object-cover"
-                          />
-                          {product.badge && (
-                            <Badge className="absolute top-2 right-2 bg-orange-500">
-                              {product.badge}
-                            </Badge>
-                          )}
-                        </div>
-                        <CardContent className="p-4">
-                          <div className="flex justify-between items-start mb-2">
-                            <h4 className="font-bold">{product.name}</h4>
-                            <span className="font-bold text-orange-500">
-                              {product.price}
-                            </span>
-                          </div>
-                          <p className="text-sm text-muted-foreground">
-                            {product.description}
-                          </p>
-                        </CardContent>
-                      </Card>
+                      <ProductCard
+                        key={index}
+                        image={product.image}
+                        alt={product.name}
+                        name={product.name}
+                        description={product.description}
+                        price={product.price}
+                        id={product.id}
+                        badge={product.badge}
+                        cta="Add to cart"
+                      />
                     ))}
                   </div>
                 </div>
@@ -314,35 +285,20 @@ function Menu() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {content.menu.sandwiches.standard.breakfastSandwiches.product.map(
-                  (item, index) => (
-                    <Card key={index}>
-                      <div className="aspect-video relative overflow-hidden rounded-t-lg">
-                        <Image
-                          src={item.image || "/placeholder.svg"}
-                          alt={item.name}
-                          fill
-                          className="object-cover"
-                        />
-                        {item.badge && (
-                          <Badge className="absolute top-2 right-2 bg-orange-500">
-                            {item.badge}
-                          </Badge>
-                        )}
-                      </div>
-                      <CardContent className="p-4">
-                        <div className="flex justify-between items-start mb-2">
-                          <h3 className="font-bold text-lg">{item.name}</h3>
-                          <span className="font-bold text-orange-500">
-                            {item.price}
-                          </span>
-                        </div>
-                        <p className="text-muted-foreground text-sm">
-                          {item.description}
-                        </p>
-                      </CardContent>
-                    </Card>
+                  (product, index) => (
+                    <ProductCard
+                      key={index}
+                      image={product.image}
+                      alt={product.name}
+                      name={product.name}
+                      description={product.description}
+                      price={product.price}
+                      id={product.id}
+                      badge={product.badge}
+                      cta="Add to cart"
+                    />
                   )
                 )}
               </div>
@@ -361,30 +317,19 @@ function Menu() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {content.menu.sandwiches.standard.lunchSandwiches.product.map(
-                  (item, index) => (
-                    <Card key={index}>
-                      <div className="aspect-video relative overflow-hidden rounded-t-lg">
-                        <Image
-                          src={item.image || "/placeholder.svg"}
-                          alt={item.name}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <CardContent className="p-4">
-                        <div className="flex justify-between items-start mb-2">
-                          <h3 className="font-bold text-lg">{item.name}</h3>
-                          <span className="font-bold text-orange-500">
-                            {item.price}
-                          </span>
-                        </div>
-                        <p className="text-muted-foreground text-sm">
-                          {item.description}
-                        </p>
-                      </CardContent>
-                    </Card>
+                  (product, index) => (
+                    <ProductCard
+                      key={index}
+                      image={product.image}
+                      alt={product.name}
+                      name={product.name}
+                      description={product.description}
+                      price={product.price}
+                      id={product.id}
+                      cta="Add to cart"
+                    />
                   )
                 )}
               </div>
@@ -409,34 +354,18 @@ function Menu() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {content.menu.paninis.product.map((item, index) => (
-                  <Card key={index}>
-                    <div className="aspect-video relative overflow-hidden rounded-t-lg">
-                      <Image
-                        src={item.image || "/placeholder.svg"}
-                        alt={item.name}
-                        fill
-                        className="object-cover"
-                      />
-                      {item.badge && (
-                        <Badge className="absolute top-2 right-2 bg-orange-500">
-                          {item.badge}
-                        </Badge>
-                      )}
-                    </div>
-                    <CardContent className="p-4">
-                      <div className="flex justify-between items-start mb-2">
-                        <h3 className="font-bold text-lg">{item.name}</h3>
-                        <span className="font-bold text-orange-500">
-                          {item.price}
-                        </span>
-                      </div>
-                      <p className="text-muted-foreground text-sm">
-                        {item.description}
-                      </p>
-                    </CardContent>
-                  </Card>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {content.menu.paninis.product.map((product, index) => (
+                  <ProductCard
+                    key={index}
+                    image={product.image}
+                    alt={product.name}
+                    name={product.name}
+                    description={product.description}
+                    price={product.price}
+                    id={product.id}
+                    cta="Add to cart"
+                  />
                 ))}
               </div>
             </TabsContent>
@@ -460,34 +389,18 @@ function Menu() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {content.menu.paninis.product.map((item, index) => (
-                  <Card key={index}>
-                    <div className="aspect-video relative overflow-hidden rounded-t-lg">
-                      <Image
-                        src={item.image || "/placeholder.svg"}
-                        alt={item.name}
-                        fill
-                        className="object-cover"
-                      />
-                      {item.badge && (
-                        <Badge className="absolute top-2 right-2 bg-orange-500">
-                          {item.badge}
-                        </Badge>
-                      )}
-                    </div>
-                    <CardContent className="p-4">
-                      <div className="flex justify-between items-start mb-2">
-                        <h3 className="font-bold text-lg">{item.name}</h3>
-                        <span className="font-bold text-orange-500">
-                          {item.price}
-                        </span>
-                      </div>
-                      <p className="text-muted-foreground text-sm">
-                        {item.description}
-                      </p>
-                    </CardContent>
-                  </Card>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {content.menu.paninis.product.map((product, index) => (
+                  <ProductCard
+                    key={index}
+                    image={product.image}
+                    alt={product.name}
+                    name={product.name}
+                    description={product.description}
+                    price={product.price}
+                    id={product.id}
+                    cta="Add to cart"
+                  />
                 ))}
               </div>
             </TabsContent>
@@ -504,28 +417,17 @@ function Menu() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {content.menu.sides.product.map((item, index) => (
-                  <Card key={index} className="overflow-hidden">
-                    <div className="aspect-square relative">
-                      <Image
-                        src={item.image || "/placeholder.svg"}
-                        alt={item.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <CardContent className="p-4">
-                      <div className="flex justify-between items-start mb-2">
-                        <h3 className="font-bold">{item.name}</h3>
-                        <span className="font-bold text-orange-500">
-                          {item.price}
-                        </span>
-                      </div>
-                      <p className="text-sm text-muted-foreground">
-                        {item.description}
-                      </p>
-                    </CardContent>
-                  </Card>
+                {content.menu.sides.product.map((product, index) => (
+                  <ProductCard
+                    key={index}
+                    image={product.image}
+                    alt={product.name}
+                    name={product.name}
+                    description={product.description}
+                    price={product.price}
+                    id={product.id}
+                    cta="Add to cart"
+                  />
                 ))}
               </div>
             </TabsContent>
@@ -653,33 +555,17 @@ function Menu() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {content.menu.desserts.product.map((item, index) => (
-                  <Card key={index} className="overflow-hidden">
-                    <div className="aspect-square relative">
-                      <Image
-                        src={item.image || "/placeholder.svg"}
-                        alt={item.name}
-                        fill
-                        className="object-cover"
-                      />
-                      {item.badge && (
-                        <Badge className="absolute top-2 right-2 bg-orange-500">
-                          {item.badge}
-                        </Badge>
-                      )}
-                    </div>
-                    <CardContent className="p-4">
-                      <div className="flex justify-between items-start mb-2">
-                        <h3 className="font-bold">{item.name}</h3>
-                        <span className="font-bold text-orange-500">
-                          {item.price}
-                        </span>
-                      </div>
-                      <p className="text-sm text-muted-foreground">
-                        {item.description}
-                      </p>
-                    </CardContent>
-                  </Card>
+                {content.menu.desserts.product.map((product, index) => (
+                  <ProductCard
+                    key={index}
+                    image={product.image}
+                    alt={product.name}
+                    name={product.name}
+                    description={product.description}
+                    price={product.price}
+                    id={product.id}
+                    cta="Add to cart"
+                  />
                 ))}
               </div>
             </TabsContent>
@@ -688,7 +574,7 @@ function Menu() {
       </section>
 
       {/* Dietary Information */}
-      <section className="py-8 bg-muted">
+      <section className="py-8 bg-muted flex justify-center">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-4">
             <h2 className="text-xl font-bold">Dietary Information</h2>
@@ -718,7 +604,7 @@ function Menu() {
       </section>
 
       {/* Order CTA */}
-      <section className="py-12 bg-orange-500 text-white">
+      <section className="py-12 bg-orange-500 text-white flex justify-center">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto space-y-6">
             <h2 className="text-3xl font-bold">Ready to Order?</h2>

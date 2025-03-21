@@ -75,11 +75,12 @@ function Cart() {
   };
 
   const timeOptions = generateTimeOptions();
+
   return (
-    <div className="container">
+    <div className="container justify-center mx-auto max-w-screen-xl">
       <div className="mb-6">
         <Link
-          href="/menu-page"
+          href="/menu"
           className="inline-flex items-center text-muted-foreground hover:text-foreground mb-4"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
@@ -98,7 +99,7 @@ function Cart() {
             {content.cart.emptyState.subtitle}
           </p>
           <Button asChild>
-            <Link href="/menu-page">{content.cart.navigation.menu}</Link>
+            <Link href="/menu">{content.cart.navigation.menu}</Link>
           </Button>
         </div>
       ) : (

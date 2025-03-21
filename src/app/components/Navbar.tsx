@@ -11,9 +11,10 @@ interface NavbarProps {
 
 function Navbar({ navItems, cta }: NavbarProps) {
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-2">
+    <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 ">
+      <div className="flex h-16 items-center justify-between px-3">
+        {/* Logo Section (fixed width) */}
+        <div className="flex-shrink-0 w-[200px] flex items-center gap-2">
           <Link href="/">
             <Image
               src={`/${content.header.logo.image}`}
@@ -24,8 +25,10 @@ function Navbar({ navItems, cta }: NavbarProps) {
           </Link>
           <span className="text-xl font-bold">Morning Bites</span>
         </div>
-        <nav>
-          <ul className="hidden md:flex gap-6">
+
+        {/* Nav Menu (centered) */}
+        <nav className="flex flex-1 justify-center">
+          <ul className="flex gap-6">
             {navItems.map((item) => (
               <li key={item} className="mx-4">
                 <Link href={`/${item.toLowerCase()}`}>{item}</Link>
@@ -39,7 +42,11 @@ function Navbar({ navItems, cta }: NavbarProps) {
             </li>
           </ul>
         </nav>
-        <CTAButton label={cta} link={"/order-online"} />
+
+        {/* CTA Button Section (fixed width) */}
+        <div className="flex-shrink-0 w-[200px] text-center">
+          <CTAButton label={cta} link={"/order-online"} />
+        </div>
       </div>
     </header>
   );
