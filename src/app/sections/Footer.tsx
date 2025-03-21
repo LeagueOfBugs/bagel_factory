@@ -4,7 +4,7 @@ import Image from "next/image";
 import { content } from "@/config/content";
 function Footer() {
   return (
-    <footer className="bg-muted py-12 border-t">
+    <footer className="bg-muted py-12 border-t flex justify-center">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">

@@ -1,9 +1,12 @@
 import { content } from "@/config/content";
-import {CTAButton} from "../components";
+import { CTAButton } from "../components";
 
 function Contact() {
   return (
-    <section className="py-16 bg-orange-500 text-white" id="contact">
+    <section
+      className="py-16 bg-orange-500 text-white flex justify-center"
+      id="contact"
+    >
       <div className="container">
         <div className="text-center max-w-2xl mx-auto space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold">

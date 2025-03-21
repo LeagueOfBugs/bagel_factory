@@ -2,7 +2,7 @@ import { content } from "@/config/content";
 import Image from "next/image";
 function OurStory() {
   return (
-    <section className="py-16" id="about">
+    <section className="py-16 flex justify-center" id="about">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="relative h-[400px] rounded-lg overflow-hidden">

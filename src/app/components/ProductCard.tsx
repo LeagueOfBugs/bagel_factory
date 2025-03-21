@@ -34,26 +34,30 @@ function ProductCard({
     quantity: 1,
   };
   return (
-    <Card className="overflow-hidden border-1">
+    <Card className="overflow-hidden border-1 py-0 flex flex-col">
       <div className="relative">
-        <div className="absolute top-4 right-4 z-10">
-          <Badge className="bg-orange-500 hover:bg-orange-600">{badge}</Badge>
-        </div>
-        <div className=" relative overflow-hidden">
+        {badge && (
+          <div className="absolute top-4 right-4 z-10">
+            <Badge className="bg-orange-500 hover:bg-orange-600">{badge}</Badge>
+          </div>
+        )}
+        <div className="relative overflow-hidden">
           <Image
             src={image || `/${content.imagePlaceholder}`}
             alt={alt || "Pumpkin Spice Bagel"}
             width={600}
             height={400}
-            className="object-cover transition-transform hover:scale-105"
+            className="object-cover transition-transform hover:scale-110 duration-300 ease-in-out"
           />
         </div>
       </div>
-      <CardContent className="p-6">
-        <h3 className="text-2xl font-bold mb-2">{name}</h3>
-        <p className="text-muted-foreground mb-4">{description}</p>
+      <CardContent className="p-6 flex flex-col flex-grow">
+        <div className="flex-grow">
+          <h3 className="text-2xl font-bold mb-2">{name}</h3>
+          <p className="text-muted-foreground mb-4">{description}</p>
+        </div>
         <div className="flex items-center justify-between">
-          <span className="text-lg font-bold text-orange-500">$3.99</span>
+          <span className="text-lg font-bold text-orange-500">${price}</span>
           <CartButton label={cta} size="sm" link={"#"} product={product} />
         </div>
       </CardContent>

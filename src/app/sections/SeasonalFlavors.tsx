@@ -1,11 +1,11 @@
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+
 import { content } from "@/config/content";
-import { ProductCard } from "../components";
+import { CTAButton, ProductCard } from "../components";
 
 function SeasonalFlavors() {
   return (
-    <section id="seasonal-flavors" className="py-16">
+    <section id="seasonal-flavors" className="py-16 flex justify-center">
       <div className="container">
         <div className="text-center mb-10">
           <Badge className="bg-orange-500 hover:bg-orange-600 mb-4">
@@ -47,12 +47,10 @@ function SeasonalFlavors() {
           <p className="text-sm text-muted-foreground mb-4">
             {content.menu.seasonalFlavors.footer}
           </p>
-          <Button
-            variant="outline"
-            className="border-orange-200 hover:bg-orange-100 dark:border-orange-800 dark:hover:bg-orange-950 hover:text-white"
-          >
-            {content.menu.seasonalFlavors.cta}
-          </Button>
+          <CTAButton
+            label={content.menu.seasonalFlavors.cta}
+            link="/flavors-of-the-month"
+          />
         </div>
       </div>
     </section>

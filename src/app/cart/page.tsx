@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Separator } from "@/components/ui/separator";
@@ -18,7 +17,6 @@ import {
 import {
   ArrowLeft,
   Clock,
-  MapPin,
   Minus,
   Plus,
   ShoppingBag,
@@ -30,40 +28,6 @@ import Link from "next/link";
 import { content } from "@/config/content";
 import { useCart } from "@/app/context/CartContext";
 
-// const initialCartItems = [
-//   {
-//     id: 1,
-//     name: "Everything Bagel with Scallion Cream Cheese",
-//     price: 5.98,
-//     quantity: 1,
-//     image: "/placeholder.svg?height=80&width=80",
-//     options: "Toasted",
-//   },
-//   {
-//     id: 2,
-//     name: "Bacon Avocado Deluxe Sandwich",
-//     price: 8.99,
-//     quantity: 2,
-//     image: "/placeholder.svg?height=80&width=80",
-//     options: "On Croissant",
-//   },
-//   {
-//     id: 3,
-//     name: "Western Omelet",
-//     price: 10.99,
-//     quantity: 1,
-//     image: "/placeholder.svg?height=80&width=80",
-//     options: "With Breakfast Potatoes",
-//   },
-//   {
-//     id: 4,
-//     name: "Large Drip Coffee",
-//     price: 3.49,
-//     quantity: 2,
-//     image: "/placeholder.svg?height=80&width=80",
-//     options: "Black",
-//   },
-// ];
 function Cart() {
   const [orderType, setOrderType] = useState("pickup");
   const [pickupTime, setPickupTime] = useState("");
@@ -80,27 +44,6 @@ function Cart() {
   } = useCart();
 
   const cartItems = getCartItems();
-  console.log(cartItems);
-
-  // const subtotal = cartItems.reduce(
-  //   (total, item) => total + item.price * item.quantity,
-  //   0
-  // );
-  // const tax = subtotal * 0.0825;
-  // const total = subtotal + tax;
-
-  // Update item quantity
-  // const updateQuantity = (id: number, newQuantity: number) => {
-  //   if (newQuantity < 1) return;
-
-  //   setCartItems(
-  //     cartItems.map((item) =>
-  //       item.id === id ? { ...item, quantity: newQuantity } : item
-  //     )
-  //   );
-  // };
-
-  // Generate pickup time options (every 15 minutes)
 
   const generateTimeOptions = () => {
     const options = [];
@@ -279,16 +222,6 @@ function Cart() {
                           {content.cart.orderSummary.pickup}
                         </Label>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="delivery" id="delivery" />
-                        <Label
-                          htmlFor="delivery"
-                          className="flex items-center gap-1"
-                        >
-                          <MapPin className="h-4 w-4" />{" "}
-                          {content.cart.orderSummary.delivery}
-                        </Label>
-                      </div>
                     </RadioGroup>
                   </div>
 
@@ -309,51 +242,6 @@ function Cart() {
                       </Select>
                       <p className="text-xs text-muted-foreground mt-1">
                         Our current location: 123 Breakfast Lane, Morningville
-                      </p>
-                    </div>
-                  )}
-
-                  {orderType === "delivery" && (
-                    <div className="space-y-3">
-                      <div>
-                        <Label htmlFor="address">Delivery Address</Label>
-                        <Input
-                          id="address"
-                          placeholder="Street Address"
-                          className="mt-1"
-                        />
-                      </div>
-                      <div className="grid grid-cols-2 gap-3">
-                        <div>
-                          <Label htmlFor="city">City</Label>
-                          <Input
-                            id="city"
-                            placeholder="City"
-                            className="mt-1"
-                          />
-                        </div>
-                        <div>
-                          <Label htmlFor="zip">ZIP Code</Label>
-                          <Input
-                            id="zip"
-                            placeholder="ZIP Code"
-                            className="mt-1"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <Label htmlFor="delivery-instructions">
-                          Delivery Instructions (Optional)
-                        </Label>
-                        <Input
-                          id="delivery-instructions"
-                          placeholder="Apartment #, Gate Code, etc."
-                          className="mt-1"
-                        />
-                      </div>
-                      <p className="text-xs text-muted-foreground">
-                        Delivery available within 5 miles. $3.99 delivery fee
-                        will be added at checkout.
                       </p>
                     </div>
                   )}

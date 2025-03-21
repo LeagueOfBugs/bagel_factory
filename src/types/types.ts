@@ -12,7 +12,7 @@ export interface CTAButtonProps {
   link?: string;
   size?: "lg" | "default" | "sm" | "icon" | null | undefined;
   variant?: "primary" | "secondary";
-  action: () => void;
+  action?: () => void;
 }
 
 export type CartButtonProps = Omit<CTAButtonProps, "action"> & {

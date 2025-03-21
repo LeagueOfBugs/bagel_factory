@@ -3,8 +3,8 @@ import { content } from "@/config/content";
 import Image from "next/image";
 function Testimonials() {
   return (
-    <section className="py-16 bg-orange-50 dark:bg-orange-950/20">
-      <div className="container">
+    <section className="py-16 bg-orange-50 dark:bg-orange-950/20 flex justify-center">
+      <div className="container ">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {content.testimonials.title}

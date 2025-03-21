@@ -11,7 +11,7 @@ import Link from "next/link";
 
 function LocationAndHours() {
   return (
-    <section className="py-16" id="location">
+    <section className="py-16 flex justify-center" id="location">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-6">
@@ -67,7 +67,7 @@ function LocationAndHours() {
             </div>
           </div>
           <div className="h-[400px] rounded-lg overflow-hidden bg-muted">
-            {/* Map placeholder - in a real implementation, you would integrate Google Maps or another map service */}
+            {/* TODO: Add interactive map */}
             <div className="w-full h-full flex items-center justify-center bg-orange-100 dark:bg-orange-950">
               <div className="text-center">
                 <MapPin className="h-12 w-12 text-orange-500 mx-auto mb-4" />
