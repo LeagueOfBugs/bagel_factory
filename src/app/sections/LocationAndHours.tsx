@@ -1,3 +1,4 @@
+import Map from "@/app/components/Map";
 import { content } from "@/config/content";
 import {
   Clock,
@@ -68,15 +69,16 @@ function LocationAndHours() {
           </div>
           <div className="h-[400px] rounded-lg overflow-hidden bg-muted">
             {/* TODO: Add interactive map */}
-            <div className="w-full h-full flex items-center justify-center bg-orange-100 dark:bg-orange-950">
-              <div className="text-center">
-                <MapPin className="h-12 w-12 text-orange-500 mx-auto mb-4" />
+            {/* <div className="w-full h-full flex items-center justify-center bg-orange-100 dark:bg-orange-950">
+              <div className="text-center"> */}
+                {/* <MapPin className="h-12 w-12 text-orange-500 mx-auto mb-4" />
                 <p className="font-medium">Interactive Map</p>
                 <p className="text-sm text-muted-foreground">
                   123 Breakfast Lane, Morningville
-                </p>
-              </div>
-            </div>
+                </p> */}
+                <Map />
+              {/* </div>
+            </div> */}
           </div>
         </div>
       </div>

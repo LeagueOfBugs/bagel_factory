@@ -5,9 +5,9 @@ import CTAButton from "./CTAButton";
 import { useCart } from "@/app/context/CartContext";
 
 function CartButton({ size, variant, label, product }: CartButtonProps) {
-  const { addItem, getCartItems } = useCart();
+  const { addItem } = useCart();
   const handleClick = () => addItem(product);
-  console.log(getCartItems());
+
   return (
     <CTAButton
       action={handleClick}
