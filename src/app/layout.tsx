@@ -5,6 +5,7 @@ import { Navbar } from "./components";
 import { content } from "@/config/content";
 import { CartProviderWrapper } from "./providers/CartProvider";
 import FooterWrapper from "./sections/FooterWrapper";
+import { ModalProviderWrapper } from "./providers/ModalProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +27,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
       <body
@@ -36,7 +36,9 @@ export default function RootLayout({
           navItems={content.header.nav.links}
           cta={content.header.nav.cta}
         />
-        <CartProviderWrapper>{children}</CartProviderWrapper>
+        <CartProviderWrapper>
+          <ModalProviderWrapper>{children}</ModalProviderWrapper>
+        </CartProviderWrapper>
         <FooterWrapper />
       </body>
     </html>

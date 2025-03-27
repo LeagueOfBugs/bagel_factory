@@ -2,8 +2,7 @@ import { content } from "@/config/content";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import CartButton from "./CartButton";
-import { CartItem } from "@/types/types";
+import ModalButton from "./ModalButton";
 
 interface ProductCardsProps {
   image?: string;
@@ -21,18 +20,8 @@ function ProductCard({
   alt,
   name,
   description,
-  cta,
-  id,
   price,
 }: ProductCardsProps) {
-  const product: CartItem = {
-    id,
-    name,
-    image,
-    description,
-    price,
-    quantity: 1,
-  };
   return (
     <Card className="overflow-hidden border-1 py-0 flex flex-col">
       <div className="relative">
@@ -58,7 +47,7 @@ function ProductCard({
         </div>
         <div className="flex items-center justify-between">
           <span className="text-lg font-bold text-orange-500">${price}</span>
-          <CartButton label={cta} size="sm" link={"#"} product={product} />
+          <ModalButton />
         </div>
       </CardContent>
     </Card>

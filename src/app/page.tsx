@@ -1,3 +1,4 @@
+import Modal from "./components/Modal";
 import {
   Contact,
   FeaturedFoods,
@@ -19,6 +20,7 @@ export default function Home() {
         <Testimonials />
         <LocationAndHours />
         <Contact />
+        <Modal />
       </main>
     </>
   );
