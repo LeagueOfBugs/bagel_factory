@@ -23,6 +23,25 @@ function Modal() {
     return null;
   }
 
+  const matchesPrefix = (id: string, prefixes: string[]) =>
+    prefixes.some((prefix: string) => id.startsWith(prefix));
+
+  const renderCustomization = () => {
+    switch (true) {
+      case matchesPrefix(order.id, ["bom", "bagel"]):
+        return (
+          <>
+            <CardTitle>Choose your spread</CardTitle>
+            <CardTitle>Add toppings</CardTitle>
+            <CardTitle>Special instructions</CardTitle>
+          </>
+        );
+
+      default:
+        break;
+    }
+  };
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm"
@@ -38,7 +57,7 @@ function Modal() {
             You&apos;re adding: <span>{order.name}</span>
           </CardDescription>
         </CardHeader>
-        <CardContent>Card Content</CardContent>
+        <CardContent>{renderCustomization()}</CardContent>
         <CardFooter className="flex justify-between">
           <CTAButton label="Cancel" action={closeModal} variant="secondary" />
           <CartButton label="Add to Cart" product={order as CartItem} />

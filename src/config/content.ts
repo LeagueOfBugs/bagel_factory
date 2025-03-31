@@ -44,7 +44,7 @@ export const content = {
         badge: "Bagel of the Month",
       },
       creamCheeseOfTheMonth: {
-        id: "ccom-2",
+        id: "ccom-1",
         title: "Cream Cheese of the Month",
         price: 1.0,
         name: "Honey Walnut Cream Cheese",
@@ -62,7 +62,7 @@ export const content = {
         "Handcrafted with love using locally sourced ingredients for the perfect breakfast experience",
       product: [
         {
-          id: "1",
+          id: "si-1",
           name: "Classic Egg & Cheese",
           description:
             "Fluffy scrambled eggs and melted cheddar on your choice of bread",
@@ -70,21 +70,21 @@ export const content = {
           image: "/placeholder.svg?height=300&width=400",
         },
         {
-          id: "2",
+          id: "si-2",
           name: "Bacon Avocado Deluxe",
           description: "Crispy bacon, fresh avocado, egg, and chipotle aioli",
           price: 8.99,
           image: "/placeholder.svg?height=300&width=400",
         },
         {
-          id: "3",
+          id: "si-3",
           name: "Veggie Sunrise",
           description: "Spinach, roasted peppers, egg whites, and feta cheese",
           price: 7.99,
           image: "/placeholder.svg?height=300&width=400",
         },
         {
-          id: "4",
+          id: "si-4",
           name: "The Lumberjack",
           description:
             "Double egg, double cheese, sausage, bacon, and hash browns",
@@ -223,62 +223,62 @@ export const content = {
       menuPageTitle: "Cream Cheese & Spreads",
       product: [
         {
-          id: 'cc-1',
+          id: "cc-1",
           name: "Plain Cream Cheese",
           description: "Our classic, smooth cream cheese",
           price: 1.99,
         },
         {
-          id: 'cc-2',
+          id: "cc-2",
           name: "Scallion Cream Cheese",
           description: "Cream cheese blended with fresh scallions",
           price: 2.49,
         },
         {
-          id: 'cc-3',
+          id: "cc-3",
           name: "Veggie Cream Cheese",
           description: "Cream cheese with diced vegetables",
           price: 2.49,
         },
         {
-          id: 'cc-4',
+          id: "cc-4",
           name: "Honey Walnut Cream Cheese",
           description: "Cream cheese with local honey and toasted walnuts",
           price: 2.99,
           badge: "Monthly Special",
         },
         {
-          id: 'cc-5',
+          id: "cc-5",
           name: "Strawberry Cream Cheese",
           description: "Cream cheese with sweet strawberry preserves",
           price: 2.49,
         },
         {
-          id: 'cc-6',
+          id: "cc-6",
           name: "Lox Spread",
           description: "Cream cheese blended with smoked salmon and dill",
           price: 3.99,
         },
         {
-          id: 'cc-7',
+          id: "cc-7",
           name: "Butter",
           description: "Whipped butter",
           price: 0.99,
         },
         {
-          id: 'cc-8',
+          id: "cc-8",
           name: "Peanut Butter",
           description: "Creamy peanut butter",
           price: 1.49,
         },
         {
-          id: 'cc-9',
+          id: "cc-9",
           name: "Hummus",
           description: "House-made chickpea hummus",
           price: 2.49,
         },
         {
-          id: 'cc-10',
+          id: "cc-10",
           name: "Avocado Spread",
           description: "Fresh avocado with lemon and sea salt",
           price: 2.99,
@@ -354,14 +354,14 @@ export const content = {
             "Our breakfast sandwiches are made to order with farm-fresh eggs and premium ingredients. Choose your bread: bagel, croissant, English muffin, or toast.",
           product: [
             {
-              id: "1",
+              id: "sandwiches-bf-1",
               name: "Classic Egg & Cheese",
               description: "Fluffy scrambled eggs and melted cheddar cheese",
               price: 6.99,
               image: "/placeholder.svg?height=300&width=400",
             },
             {
-              id: "2",
+              id: "sandwiches-bf-2",
               name: "Bacon Egg & Cheese",
               description:
                 "Crispy bacon, scrambled eggs, and melted American cheese",
@@ -369,7 +369,7 @@ export const content = {
               image: "/placeholder.svg?height=300&width=400",
             },
             {
-              id: "3",
+              id: "sandwiches-bf-3",
               name: "Sausage Egg & Cheese",
               description:
                 "Savory sausage patty, scrambled eggs, and melted cheddar",
@@ -377,7 +377,7 @@ export const content = {
               image: "/placeholder.svg?height=300&width=400",
             },
             {
-              id: "4",
+              id: "sandwiches-bf-4",
               name: "Ham Egg & Cheese",
               description:
                 "Sliced ham, scrambled eggs, and melted Swiss cheese",
@@ -385,7 +385,7 @@ export const content = {
               image: "/placeholder.svg?height=300&width=400",
             },
             {
-              id: "5",
+              id: "sandwiches-bf-5",
               name: "Bacon Avocado Deluxe",
               description:
                 "Crispy bacon, fresh avocado, egg, and chipotle aioli",
@@ -394,7 +394,7 @@ export const content = {
               badge: "Popular",
             },
             {
-              id: "6",
+              id: "sandwiches-bf-6",
               name: "Veggie Sunrise",
               description:
                 "Spinach, roasted peppers, egg whites, and feta cheese",
@@ -402,7 +402,7 @@ export const content = {
               image: "/placeholder.svg?height=300&width=400",
             },
             {
-              id: "7",
+              id: "sandwiches-bf-7",
               name: "The Lumberjack",
               description:
                 "Double egg, double cheese, sausage, bacon, and hash browns",
@@ -410,7 +410,7 @@ export const content = {
               image: "/placeholder.svg?height=300&width=400",
             },
             {
-              id: "8",
+              id: "sandwiches-bf-8",
               name: "Smoked Salmon",
               description:
                 "Smoked salmon, cream cheese, capers, red onion, and tomato",
@@ -426,42 +426,42 @@ export const content = {
           badge: "Available after 11am",
           product: [
             {
-              id: "1",
+              id: "sandwiches-l-1",
               name: "Turkey Club",
               description: "Roasted turkey, bacon, lettuce, tomato, and mayo",
               price: 9.99,
               image: "/placeholder.svg?height=300&width=400",
             },
             {
-              id: "2",
+              id: "sandwiches-l-2",
               name: "BLT",
               description: "Crispy bacon, lettuce, tomato, and mayo",
               price: 8.99,
               image: "/placeholder.svg?height=300&width=400",
             },
             {
-              id: "3",
+              id: "sandwiches-l-3",
               name: "Chicken Salad",
               description: "House-made chicken salad with grapes and walnuts",
               price: 9.49,
               image: "/placeholder.svg?height=300&width=400",
             },
             {
-              id: "4",
+              id: "sandwiches-l-4",
               name: "Tuna Melt",
               description: "Tuna salad with melted cheddar cheese",
               price: 9.49,
               image: "/placeholder.svg?height=300&width=400",
             },
             {
-              id: "5",
+              id: "sandwiches-l-5",
               name: "Veggie Delight",
               description: "Cucumber, avocado, sprouts, tomato, and hummus",
               price: 8.99,
               image: "/placeholder.svg?height=300&width=400",
             },
             {
-              id: "6",
+              id: "sandwiches-l-6",
               name: "Reuben",
               description:
                 "Corned beef, sauerkraut, Swiss cheese, and Russian dressing",
@@ -473,21 +473,25 @@ export const content = {
       },
       specialty: [
         {
+          id: "sandwiches-s-1",
           name: "Brookhaven",
           description: "",
           price: 8.0,
         },
         {
+          id: "sandwiches-s-2",
           name: "Twin Towers",
           description: "",
           price: 8.0,
         },
         {
+          id: "sandwiches-s-3",
           name: "R&B Combo",
           description: "",
           price: 8.0,
         },
         {
+          id: "sandwiches-s-4",
           name: "B.U. Special",
           description: "",
           price: 8.0,
@@ -495,36 +499,43 @@ export const content = {
       ],
       premium: [
         {
+          id: "sandwiches-p-1",
           name: "Chicken Salad",
           description: "",
           price: 8.65,
         },
         {
+          id: "sandwiches-p-2",
           name: "Pastrami Reuben",
           description: "",
           price: 8.65,
         },
         {
+          id: "sandwiches-p-3",
           name: "Cheese Steak",
           description: "",
           price: 8.65,
         },
         {
+          id: "sandwiches-p-4",
           name: "Turkey Club",
           description: "",
           price: 8.65,
         },
         {
+          id: "sandwiches-p-5",
           name: "Whitefish Salad",
           description: "",
           price: 8.65,
         },
         {
+          id: "sandwiches-p-6",
           name: "Italian",
           description: "",
           price: 8.65,
         },
         {
+          id: "sandwiches-p-7",
           name: "The Bomb",
           description: "",
           price: 8.75,
@@ -679,63 +690,63 @@ export const content = {
       subtitle: "Complete your meal with one of our delicious sides.",
       product: [
         {
-          id: "1",
+          id: "side-1",
           name: "Hash Browns",
           description: "Crispy shredded potatoes",
           price: 2.99,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "2",
+          id: "side-2",
           name: "Breakfast Potatoes",
           description: "Seasoned diced potatoes with peppers and onions",
           price: 3.49,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "3",
+          id: "side-3",
           name: "Fresh Fruit Cup",
           description: "Seasonal fresh fruit",
           price: 3.99,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "4",
+          id: "side-4",
           name: "Yogurt Parfait",
           description: "Greek yogurt with granola and berries",
           price: 4.99,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "5",
+          id: "side-5",
           name: "Side Salad",
           description: "Mixed greens with choice of dressing",
           price: 3.99,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "6",
+          id: "side-6",
           name: "Kettle Chips",
           description: "Sea salt or BBQ flavor",
           price: 1.99,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "7",
+          id: "side-7",
           name: "Bacon (3 slices)",
           description: "Crispy applewood smoked bacon",
           price: 2.99,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "8",
+          id: "side-8",
           name: "Sausage Links (2)",
           description: "Savory breakfast sausage",
           price: 2.99,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "9",
+          id: "side-9",
           name: "Extra Egg",
           description: "One farm-fresh egg, any style",
           price: 1.49,
@@ -933,28 +944,28 @@ export const content = {
         "Satisfy your sweet tooth with our selection of house-made desserts and pastries.",
       product: [
         {
-          id: "1",
+          id: "dessert-1",
           name: "Chocolate Chip Cookie",
           description: "Large cookie with semi-sweet chocolate chunks",
           price: 2.99,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "2",
+          id: "dessert-2",
           name: "Blueberry Muffin",
           description: "Moist muffin loaded with fresh blueberries",
           price: 3.49,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "3",
+          id: "dessert-3",
           name: "Croissant",
           description: "Buttery, flaky French pastry",
           price: 3.49,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "4",
+          id: "dessert-4",
           name: "Cinnamon Roll",
           description:
             "Warm roll with cinnamon swirl and cream cheese frosting",
@@ -963,35 +974,35 @@ export const content = {
           badge: "Popular",
         },
         {
-          id: "5",
+          id: "dessert-5",
           name: "Brownie",
           description: "Rich, fudgy chocolate brownie",
           price: 3.49,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "6",
+          id: "dessert-6",
           name: "Cheesecake Slice",
           description: "New York style with graham cracker crust",
           price: 4.99,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "7",
+          id: "dessert-7",
           name: "Danish",
           description: "Flaky pastry with fruit filling",
           price: 3.99,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "8",
+          id: "dessert-8",
           name: "Scone",
           description: "Buttery pastry with cranberries and orange zest",
           price: 3.49,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "9",
+          id: "dessert-9",
           name: "Pumpkin Bread",
           description: "Moist spiced bread with pumpkin and walnuts",
           price: 3.99,
