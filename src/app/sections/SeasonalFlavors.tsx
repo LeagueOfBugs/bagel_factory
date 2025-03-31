@@ -42,7 +42,6 @@ function SeasonalFlavors() {
             price={content.menu.seasonalFlavors.creamCheeseOfTheMonth.price}
           />
         </div>
-
         <div className="text-center mt-10">
           <p className="text-sm text-muted-foreground mb-4">
             {content.menu.seasonalFlavors.footer}

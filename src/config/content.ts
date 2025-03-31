@@ -34,7 +34,7 @@ export const content = {
       badge: "Limited Time",
       cta: "Vote for next month",
       bagelOfTheMonth: {
-        id: "1",
+        id: "bom-1",
         title: "Bagel of the Month",
         price: 4.99,
         name: "Pumpkin Spice Bagel",
@@ -44,7 +44,7 @@ export const content = {
         badge: "Bagel of the Month",
       },
       creamCheeseOfTheMonth: {
-        id: "2",
+        id: "ccom-2",
         title: "Cream Cheese of the Month",
         price: 1.0,
         name: "Honey Walnut Cream Cheese",
@@ -120,28 +120,28 @@ export const content = {
       },
       product: [
         {
-          id: "1",
+          id: "bagel-1",
           name: "French Toast",
           description: "Cinnamon, sugar, and vanilla",
           price: 1.5,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "2",
+          id: "bagel-2",
           name: "Sun-dried Tomato",
           description: "Sun-dried tomatoes, olive oil, garlic",
           price: 1.4,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "3",
+          id: "bagel-3",
           name: "Jalapeno",
           description: "Jalapenos, cheddar cheese",
           price: 1.7,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "4",
+          id: "bagel-4",
           name: "Whole Wheat Everything",
           description:
             "Whole wheat flour, sesame seeds, poppy seeds, garlic, onion",
@@ -149,28 +149,28 @@ export const content = {
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "5",
+          id: "bagel-5",
           name: "Plain",
           description: "Our classic, chewy bagel with a golden crust",
           price: 2.99,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "6",
+          id: "bagel-6",
           name: "Everything",
           description: "Topped with sesame, poppy, garlic, onion, and salt",
           price: 3.49,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "7",
+          id: "bagel-7",
           name: "Sesame",
           description: "Coated with toasted sesame seeds",
           price: 3.29,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "8",
+          id: "bagel-8",
           name: "Cinnamon Raisin",
           description:
             "Sweet cinnamon and plump raisins in a soft, chewy bagel",
@@ -178,7 +178,7 @@ export const content = {
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "9",
+          id: "bagel-9",
           name: "Asiago Cheese",
           description:
             "Topped with aged Asiago cheese for a savory, crispy crust",
@@ -186,7 +186,7 @@ export const content = {
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "10",
+          id: "bagel-10",
           name: "Blueberry",
           description:
             "Bursting with fresh blueberries for a sweet breakfast treat",
@@ -194,14 +194,14 @@ export const content = {
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "11",
+          id: "bagel-11",
           name: "Garlic",
           description: "Infused with roasted garlic for a savory flavor",
           price: 3.29,
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "12",
+          id: "bagel-12",
           name: "Whole Wheat",
           description:
             "Made with 100% whole wheat flour for a healthier option",
@@ -209,7 +209,7 @@ export const content = {
           image: "/placeholder.svg?height=200&width=200",
         },
         {
-          id: "13",
+          id: "bagel-13",
           name: "Pumpkin Spice",
           description: "Limited time! Warm pumpkin spice with streusel topping",
           price: 3.99,
@@ -223,62 +223,62 @@ export const content = {
       menuPageTitle: "Cream Cheese & Spreads",
       product: [
         {
-          id: 1,
+          id: 'cc-1',
           name: "Plain Cream Cheese",
           description: "Our classic, smooth cream cheese",
           price: 1.99,
         },
         {
-          id: 2,
+          id: 'cc-2',
           name: "Scallion Cream Cheese",
           description: "Cream cheese blended with fresh scallions",
           price: 2.49,
         },
         {
-          id: 3,
+          id: 'cc-3',
           name: "Veggie Cream Cheese",
           description: "Cream cheese with diced vegetables",
           price: 2.49,
         },
         {
-          id: 4,
+          id: 'cc-4',
           name: "Honey Walnut Cream Cheese",
           description: "Cream cheese with local honey and toasted walnuts",
           price: 2.99,
           badge: "Monthly Special",
         },
         {
-          id: 5,
+          id: 'cc-5',
           name: "Strawberry Cream Cheese",
           description: "Cream cheese with sweet strawberry preserves",
           price: 2.49,
         },
         {
-          id: 6,
+          id: 'cc-6',
           name: "Lox Spread",
           description: "Cream cheese blended with smoked salmon and dill",
           price: 3.99,
         },
         {
-          id: 7,
+          id: 'cc-7',
           name: "Butter",
           description: "Whipped butter",
           price: 0.99,
         },
         {
-          id: 8,
+          id: 'cc-8',
           name: "Peanut Butter",
           description: "Creamy peanut butter",
           price: 1.49,
         },
         {
-          id: 9,
+          id: 'cc-9',
           name: "Hummus",
           description: "House-made chickpea hummus",
           price: 2.49,
         },
         {
-          id: 10,
+          id: 'cc-10',
           name: "Avocado Spread",
           description: "Fresh avocado with lemon and sea salt",
           price: 2.99,
@@ -291,7 +291,7 @@ export const content = {
         "Our salads feature locally sourced produce and house-made dressings. Add grilled chicken, turkey, or avocado to any salad for an additional charge.",
       product: [
         {
-          id: "1",
+          id: "salad-1",
           name: "Garden Salad",
           description:
             "Mixed greens, cucumber, tomato, carrot, and red onion with choice of dressing",
@@ -300,7 +300,7 @@ export const content = {
           badge: "Vegetarian",
         },
         {
-          id: "2",
+          id: "salad-2",
           name: "Caesar Salad",
           description:
             "Romaine lettuce, parmesan cheese, croutons, and Caesar dressing",
@@ -308,7 +308,7 @@ export const content = {
           image: "/placeholder.svg?height=300&width=400",
         },
         {
-          id: "3",
+          id: "salad-3",
           name: "Greek Salad",
           description:
             "Romaine, feta, kalamata olives, cucumber, tomato, red onion, and Greek dressing",
@@ -317,7 +317,7 @@ export const content = {
           badge: "Vegetarian",
         },
         {
-          id: "4",
+          id: "salad-4",
           name: "Cobb Salad",
           description:
             "Mixed greens, grilled chicken, bacon, hard-boiled egg, avocado, tomato, and blue cheese",
@@ -326,7 +326,7 @@ export const content = {
           badge: "Popular",
         },
         {
-          id: "5",
+          id: "salad-5",
           name: "Spinach & Berry Salad",
           description:
             "Baby spinach, strawberries, blueberries, goat cheese, candied pecans, and balsamic vinaigrette",
@@ -335,7 +335,7 @@ export const content = {
           badge: "Seasonal",
         },
         {
-          id: "6",
+          id: "salad-6",
           name: "Southwest Salad",
           description:
             "Romaine, black beans, corn, avocado, tomato, tortilla strips, and chipotle ranch dressing",
@@ -537,7 +537,7 @@ export const content = {
         "Our paninis are made with artisan bread and premium ingredients, pressed to perfection on our grill. All paninis are served with a side of kettle chips or small side salad.",
       product: [
         {
-          id: "1",
+          id: "panini-1",
           name: "Caprese Panini",
           description:
             "Fresh mozzarella, tomato, basil, and balsamic glaze on ciabatta",
@@ -546,7 +546,7 @@ export const content = {
           badge: "Vegetarian",
         },
         {
-          id: "2",
+          id: "panini-2",
           name: "Turkey Pesto",
           description:
             "Roasted turkey, provolone, pesto, and roasted red peppers on sourdough",
@@ -555,7 +555,7 @@ export const content = {
           badge: "Popular",
         },
         {
-          id: "3",
+          id: "panini-3",
           name: "Cuban",
           description:
             "Ham, roasted pork, Swiss cheese, pickles, and mustard on Cuban bread",
@@ -563,14 +563,14 @@ export const content = {
           image: "/placeholder.svg?height=300&width=400",
         },
         {
-          id: "4",
+          id: "panini-4",
           name: "Chicken Bacon Ranch",
           description: "Grilled chicken, bacon, cheddar, and ranch on ciabatta",
           price: 10.99,
           image: "/placeholder.svg?height=300&width=400",
         },
         {
-          id: "5",
+          id: "panini-5",
           name: "Mediterranean Veggie",
           description:
             "Hummus, feta, cucumber, olive tapenade, and spinach on whole grain",
@@ -579,14 +579,14 @@ export const content = {
           badge: "Vegetarian",
         },
         {
-          id: "6",
+          id: "panini-6",
           name: "Tuna Melt Panini",
           description: "House-made tuna salad, tomato, and melted Swiss on rye",
           price: 9.99,
           image: "/placeholder.svg?height=300&width=400",
         },
         {
-          id: "7",
+          id: "panini-7",
           name: "Italian",
           description:
             "Salami, pepperoni, ham, provolone, and Italian dressing on ciabatta",
@@ -594,7 +594,7 @@ export const content = {
           image: "/placeholder.svg?height=300&width=400",
         },
         {
-          id: "8",
+          id: "panini-8",
           name: "Apple Brie",
           description: "Sliced apple, brie, honey, and arugula on sourdough",
           price: 9.99,
@@ -610,6 +610,7 @@ export const content = {
       badge: "Made to Order",
       product: [
         {
+          id: "omelet-1",
           name: "Classic Cheese",
           description:
             "Three-egg omelet with your choice of American, cheddar, Swiss, or feta cheese",
@@ -617,6 +618,7 @@ export const content = {
           image: "/placeholder.svg?height=300&width=400",
         },
         {
+          id: "omelet-2",
           name: "Western",
           description: "Ham, bell peppers, onions, and cheddar cheese",
           price: 10.99,
@@ -624,6 +626,7 @@ export const content = {
           badge: "Popular",
         },
         {
+          id: "omelet-3",
           name: "Veggie Delight",
           description:
             "Spinach, mushrooms, tomatoes, bell peppers, onions, and feta cheese",
@@ -632,12 +635,14 @@ export const content = {
           badge: "Vegetarian",
         },
         {
+          id: "omelet-4",
           name: "Meat Lover's",
           description: "Bacon, sausage, ham, and cheddar cheese",
           price: 11.99,
           image: "/placeholder.svg?height=300&width=400",
         },
         {
+          id: "omelet-5",
           name: "Greek",
           description: "Spinach, tomatoes, kalamata olives, and feta cheese",
           price: 10.49,
@@ -645,12 +650,14 @@ export const content = {
           badge: "Vegetarian",
         },
         {
+          id: "omelet-6",
           name: "Smoked Salmon",
           description: "Smoked salmon, cream cheese, capers, and red onions",
           price: 12.99,
           image: "/placeholder.svg?height=300&width=400",
         },
         {
+          id: "omelet-7",
           name: "Southwest",
           description:
             "Chorizo, black beans, corn, jalapeños, pepper jack cheese, and avocado",
@@ -658,6 +665,7 @@ export const content = {
           image: "/placeholder.svg?height=300&width=400",
         },
         {
+          id: "omelet-8",
           name: "Farmer's Market",
           description: "Seasonal vegetables, herbs, and goat cheese",
           price: 10.99,

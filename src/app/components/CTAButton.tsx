@@ -11,8 +11,8 @@ function CTAButton({
 }: CTAButtonProps) {
   const buttonClass =
     variant === "primary"
-      ? "bg-orange-500 hover:bg-orange-600"
-      : "bg-white text-orange-600 border-white hover:bg-white/20";
+      ? "bg-orange-500 hover:bg-orange-600 cursor-pointer"
+      : "bg-white text-orange-600 border-white hover:bg-white/20 cursor-pointer";
 
   if (link) {
     return (

@@ -7,15 +7,21 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { useCart } from "../context/CartContext";
 import { useModal } from "../context/ModalContext";
 import CTAButton from "./CTAButton";
+import { usePendingOrder } from "../context/PendingOrderContext";
+import CartButton from "./CartButton";
+import { CartItem } from "@/types/types";
 
 function Modal() {
-  const { addItem } = useCart();
   const { isOpen, closeModal } = useModal();
-
+  const { order } = usePendingOrder();
   if (!isOpen) return null;
+
+  console.log(order);
+  if (!order) {
+    return null;
+  }
 
   return (
     <div
@@ -29,13 +35,13 @@ function Modal() {
         <CardHeader>
           <CardTitle>Customize Your Order</CardTitle>
           <CardDescription>
-            You&apos;re adding: <span>item here</span>
+            You&apos;re adding: <span>{order.name}</span>
           </CardDescription>
         </CardHeader>
         <CardContent>Card Content</CardContent>
         <CardFooter className="flex justify-between">
           <CTAButton label="Cancel" action={closeModal} variant="secondary" />
-          <CTAButton label="Add to Cart" action={closeModal} />
+          <CartButton label="Add to Cart" product={order as CartItem} />
         </CardFooter>
       </Card>
     </div>

@@ -6,6 +6,7 @@ import { content } from "@/config/content";
 import { CartProviderWrapper } from "./providers/CartProvider";
 import FooterWrapper from "./sections/FooterWrapper";
 import { ModalProviderWrapper } from "./providers/ModalProvider";
+import { PendingOrderProviderWrapper } from "./providers/PendingOrderProivider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,9 +37,11 @@ export default function RootLayout({
           navItems={content.header.nav.links}
           cta={content.header.nav.cta}
         />
-        <CartProviderWrapper>
-          <ModalProviderWrapper>{children}</ModalProviderWrapper>
-        </CartProviderWrapper>
+        <PendingOrderProviderWrapper>
+          <CartProviderWrapper>
+            <ModalProviderWrapper>{children}</ModalProviderWrapper>
+          </CartProviderWrapper>
+        </PendingOrderProviderWrapper>
         <FooterWrapper />
       </body>
     </html>

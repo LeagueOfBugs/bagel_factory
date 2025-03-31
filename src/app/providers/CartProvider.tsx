@@ -41,7 +41,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const getItemTotal = (id: string) => {
     const item = cartItems.find((item) => item.id === id);
-    if (item) {
+    if (item && item.quantity) {
       const total = item.price * item.quantity;
       return total;
     }

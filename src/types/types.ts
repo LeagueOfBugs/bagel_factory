@@ -4,7 +4,8 @@ export interface CartItem {
   image: string | undefined;
   description: string;
   price: number;
-  quantity: number;
+  quantity?: number;
+  options?: Products[];
 }
 
 export interface CTAButtonProps {
@@ -23,8 +24,8 @@ export interface Products {
   name: string;
   image: string;
   description: string;
-  price: string;
-  id: number;
+  price: number;
+  id: string;
 }
 
 export type CartAction =
@@ -34,4 +35,3 @@ export type CartAction =
   | { type: "DECREASE_QUANTITY"; payload: string }
   | { type: "ITEM_TOTAL"; payload: string }
   | { type: "CART_TOTAL" };
-// | { type: }

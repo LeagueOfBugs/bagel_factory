@@ -6,6 +6,7 @@ import { ArrowLeft, Coffee } from "lucide-react";
 import Link from "next/link";
 import CTAButton from "../components/CTAButton";
 import { ProductCard } from "../components";
+import Modal from "../components/Modal";
 
 function Menu() {
   return (
@@ -629,6 +630,7 @@ function Menu() {
           </div>
         </div>
       </section>
+      <Modal />
     </main>
   );
 }

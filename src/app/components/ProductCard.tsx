@@ -21,7 +21,15 @@ function ProductCard({
   name,
   description,
   price,
+  id,
 }: ProductCardsProps) {
+  const product = {
+    id,
+    name,
+    description,
+    price,
+    image: image || `/${content.imagePlaceholder}`,
+  };
   return (
     <Card className="overflow-hidden border-1 py-0 flex flex-col">
       <div className="relative">
@@ -33,7 +41,7 @@ function ProductCard({
         <div className="relative overflow-hidden">
           <Image
             src={image || `/${content.imagePlaceholder}`}
-            alt={alt || "Pumpkin Spice Bagel"}
+            alt={alt || "Bagel"}
             width={600}
             height={400}
             className="object-cover transition-transform hover:scale-110 duration-300 ease-in-out"
@@ -47,7 +55,7 @@ function ProductCard({
         </div>
         <div className="flex items-center justify-between">
           <span className="text-lg font-bold text-orange-500">${price}</span>
-          <ModalButton />
+          <ModalButton product={product} />
         </div>
       </CardContent>
     </Card>
