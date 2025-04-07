@@ -6,7 +6,7 @@ import { ArrowLeft, Coffee } from "lucide-react";
 import Link from "next/link";
 import CTAButton from "../components/CTAButton";
 import { ProductCard } from "../components";
-import Modal from "../components/Modal";
+import Modal from "../components/modal/Modal";
 
 function Menu() {
   return (
