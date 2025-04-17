@@ -2,7 +2,17 @@ import { menu } from "@/config/menu";
 import React from "react";
 import IngredientCheckbox from "../IngredientCheckbox";
 
-function SpreadOptions() {
+function SpreadOptions({
+  onExtrasChange,
+  selectedExtras,
+  selectedBagel,
+  onBagelChange,
+}: {
+  onExtrasChange: (item: string, checked: boolean) => void;
+  selectedExtras: string[];
+  selectedBagel: string;
+  onBagelChange: (item: string) => void;
+}) {
   return (
     <div>
       <h3 className="font-bold ">Bagel type</h3>
@@ -14,8 +24,8 @@ function SpreadOptions() {
               key={bagels.id}
               label={bagels.name}
               price={bagels.price}
-              checked={false}
-              onChange={() => {}}
+              checked={selectedBagel === bagels.name}
+              onChange={() => onBagelChange(bagels.name)}
             />
           ))}
       </div>
@@ -27,8 +37,10 @@ function SpreadOptions() {
             <IngredientCheckbox
               key={item.id}
               label={item.name}
-              checked={false}
-              onChange={() => {}}
+              checked={selectedExtras.includes(item.name)}
+              onChange={(checked: boolean) =>
+                onExtrasChange(item.name, checked)
+              }
             />
           ))}
       </div>

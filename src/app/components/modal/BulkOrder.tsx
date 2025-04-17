@@ -1,5 +1,4 @@
 "use client";
-import React, { useState } from "react";
 import IngredientCheckbox from "../IngredientCheckbox";
 import CheckboxSelector from "../CheckboxSelector";
 import { menu } from "@/config/menu";
@@ -12,20 +11,24 @@ type BulkOption = {
 type BulkOrderProps = {
   isSpread?: boolean;
   isBagel?: boolean;
+  spread?: string[];
+  extra?: string[];
+  bulkBagel?: string;
+  handleBulkBagelChange?: (bulkOption: string) => void;
+  bulkSpread?: string | null;
+  handleBulkSpreadChange?: (bulkOption: string) => void;
 };
 
-function BulkOrder({ isSpread = false, isBagel = false }: BulkOrderProps) {
-  const [selectedBulkOption, setSelectedBulkOption] =
-    useState<BulkOption | null>(null);
-
-  const onBulkOptionSelection = (option: BulkOption, checked: boolean) => {
-    if (checked) {
-      setSelectedBulkOption(option);
-    } else {
-      setSelectedBulkOption(null);
-    }
-  };
-
+function BulkOrder({
+  isSpread = false,
+  isBagel = false,
+  spread,
+  extra,
+  bulkBagel,
+  handleBulkBagelChange,
+  bulkSpread,
+  handleBulkSpreadChange,
+}: BulkOrderProps) {
   const spreadBulkOptions: BulkOption[] = [
     { name: "1/4 lb", price: 3.5 },
     { name: "1/2 lb", price: 5.99 },
@@ -58,9 +61,12 @@ function BulkOrder({ isSpread = false, isBagel = false }: BulkOrderProps) {
             <IngredientCheckbox
               key={option.name}
               label={option.name}
-              onChange={(checked) => onBulkOptionSelection(option, checked)}
-              checked={selectedBulkOption?.name === option.name}
+              onChange={() => handleBulkSpreadChange?.(option.name)}
+              checked={bulkSpread === option.name}
               price={option.price}
+              disabled={
+                (spread && spread.length > 0) || (extra && extra.length > 0)
+              }
             />
           ))}
         </>
@@ -73,9 +79,12 @@ function BulkOrder({ isSpread = false, isBagel = false }: BulkOrderProps) {
             <IngredientCheckbox
               key={option.name}
               label={option.name}
-              onChange={(checked) => onBulkOptionSelection(option, checked)}
-              checked={selectedBulkOption?.name === option.name}
+              onChange={() => handleBulkBagelChange?.(option.name)}
+              checked={bulkBagel === option.name}
               price={option.price}
+              disabled={
+                (spread && spread.length > 0) || (extra && extra.length > 0)
+              }
             />
           ))}
 
@@ -84,11 +93,7 @@ function BulkOrder({ isSpread = false, isBagel = false }: BulkOrderProps) {
             label="Bagel Selection"
           />
 
-          <CheckboxSelector
-            selections={bagelNames}
-            label="Bagel Type"
-            checkbox={true}
-          />
+          <CheckboxSelector selections={bagelNames} label="Bagel Type" />
         </>
       )}
     </>

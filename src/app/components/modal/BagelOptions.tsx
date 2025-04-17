@@ -2,17 +2,15 @@ import { menu } from "@/config/menu";
 import IngredientCheckbox from "../IngredientCheckbox";
 
 export function BagelOptions({
-  selectedSpread,
+  spread,
   selectedExtras,
   onSpreadChange,
   onExtrasChange,
 }: {
-  selectedSpread: string[];
+  spread: string[];
   selectedExtras: string[];
   onSpreadChange: (item: string, checked: boolean) => void;
   onExtrasChange: (item: string, checked: boolean) => void;
-  specialInstructions: string;
-  onInstructionsChange: (value: string) => void;
 }) {
   return (
     <div>
@@ -24,18 +22,14 @@ export function BagelOptions({
             <IngredientCheckbox
               key={item.id}
               label={item.name}
-              checked={selectedSpread.includes(item.name)}
-              disabled={
-                selectedSpread.length >= 2 &&
-                !selectedSpread.includes(item.name)
-              }
+              checked={spread && spread.includes(item.name)}
+              disabled={spread.length >= 2 && !spread.includes(item.name)}
               onChange={(checked: boolean) =>
                 onSpreadChange(item.name, checked)
               }
             />
           ))}
       </div>
-
       <h3 className="font-bold mt-4">Add extras:</h3>
       <div className="grid w-full grid-cols-2">
         {menu
